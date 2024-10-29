@@ -10,28 +10,28 @@
     <script th:src="@{/js/bootstrap.js}"></script>
 </head>
 <body>
-<header th:replace="/layout/header :: header"></header>
+    <header th:replace="/layout/header :: header"></header>
 
-<a th:href="@{/categories/signup}">Add Category</a>
-<table>
-    <tr>
-        <th>STT</th>
-        <th>Category name</th>
-        <th>Image</th>
-    </tr>
+    <a th:href="@{/categories/signup}">Add Category</a>
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Category name</th>
+            <th>Image</th>
+        </tr>
 
-    <tbody>
-    <tbody>
-    <tr th:each="category, iterStat : ${list}">
-        <td th:text="${iterStat.count}"></td>
-        <td th:text="${category.categoryName}"></td>
-    </tr>
-
-
-    </tbody>
-</table>
+        <tbody>
+        <tbody>
+        <tr th:each="category, iterStat : ${list}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${category.categoryname}"></td>
+        </tr>
 
 
-<footer th:replace="/layout/footer :: footer"></footer>
+        </tbody>
+    </table>
+
+
+    <footer th:replace="/layout/footer :: footer"></footer>
 </body>
 </html>
